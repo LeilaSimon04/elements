@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez l'ultime évasion dans un de nos hôtels de luxe 4 Éléments. Chaque hôtel vous propose, à travers un des 4 éléments (Feu Air Terre Eau), une expérience incomparable. Venez vous ressourcer dans un cadre exceptionnel. Réservez dès maintenant pour une escapade unique.">
+    <title>Hôtels 4 Elements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--HEADER-->
+    <header class="petitPadding flex spaceBetween itemCenter">
+        <!--Div Header gauche-->
+        <div class="flex spaceBetween itemCenter headerGauche">
+            <a href="./home.html"><img src="./assets/logo-noir-Hotel-4-Elements.png" alt="Logo des Hôtels 4 Elements"></a>
+            <nav>
+                <ul class="flex spaceBetween">
+                    <li><a href="./feu.html" title="Hôtel Feu">Feu</a></li>
+                    <li><a href="./air.html" title="Hôtel Air">Air</a></li>
+                    <li><a href="./terre.html" title="Hôtel Terre">Terre</a></li>
+                    <li><a href="./eau.html" title="Hôtel Eau">Eau</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--Div Header droit-->
+        <div class="flex spaceBetween itemCenter headerDroit">
+            <nav>
+                <ul class="flex spaceBetween">
+                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="lien sur la page Facebook" title="Facebook Hotels 4 Elements"><img src="./assets/icon/facebook.svg" alt="Logo Facebook pour se rendre sur la page de l'hôtel 4 Elements"></a></li>
+                    <li><a href="lien sur la page Instagram" title="Instagram Hotels 4 Elements"><img src="./assets/icon/instagram.svg" alt="Logo Instagram pour se rendre sur la page de l'hôtel 4 Elements"></a></li>
+                </ul>
+            </nav>
+            <div class="flex itemCenter spaceBetween">
+            <button class="buttonSmall" type="button">Réserver</button>
+            <a href="lien pour se connecter à son compte">Se connecter</a>
+            </div>
+        </div>
+    </header>
+    <!--HERO-->
+    <section class="hero">
+        <video  autoplay loop muted>
+            <source src="./assets/home.mp4" type="video/mp4">
+            Une femme marche le long d'une piscine d'un hôtel 4 Elements
+        </video>
+        <div class="textHero">
+            <h1>Venez vivre une escapade inoubliable <br>
+                dans nos hôtels au cadre exceptionnel</h1>
+            <!--Div Input-->
+            <div class="reservation flex spaceBetween">
+                <h4>Rechercher une disponibilité</h4>
+                <!--Select choix de l'hôtel-->
+                <div>
+                    <label for="hotel">Choisir un hôtel</label>
+                    <select name="hotels" id="hotel-select">
+                    <!--Pour plus d'harmonie je proposerai au client de ne pas commencer par l'hôtel Terre mais de faire apparaitre le choix des hôtels dans le même ordre que sur la page-->
+                    <option value="feu">Hôtel Feu</option>
+                    <option value="air">Hôtel Air</option>
+                    <option value="terre">Hôtel Terre</option>
+                    <option value="eau">Hôtel Eau</option>
+                    </select>
+                </div>
+                <!--Input choix du nombre de personne-->
+                <div class="inputNbr">
+                    <label for="nombrePersonne">Nombre de personnes</label>
+                    <!--Comme la réservation pour plusieurs groupes se fait par téléphone et que ces hôtels s'adressent aux couples (venant) sans enfant je mets 2 en max-->
+                    <input type="number" id="nombrePersonne" name="nombrePersonne" min="1" max="2" />
+                </div>
+                <!--Input Choix des dates-->
+                <div>
+                    <label for="dateArrivee">Choisir une date d'arrivée</label>
+                    <input type="date" id="dateArrivee" name="dateArrivee" value="11/02/2024" min="11-02-2024" max="31-12-2024" />
+                </div>
+                <Button class="buttonBig">Chercher</Button>
+            </div>
+        </div>
+    </section>
+    <main>
+    <!--Section de la présentation des 4 hôtels-->
+    <section class="container-hotel flex paddingTopBot">
+        <!--Hôtel FEU-->
+        <article class="cardDroite flex spaceBetween">
+            <!--Présentation hôtel FEU-->
+            <div class="cardPresentation flex">
+                <h2>Hôtel Feu</h2>
+                <div class="localisation flex itemCenter">
+                    <img src="./assets/icon/map-pin.svg" alt="Map pin pour visualiser le lieu sur une carte">
+                    <p>Finlande</p>
+                </div>
+                <div class="avis flex itemCenter">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#D9C7B3"/>
+                    </svg>
+                    <p>(325 avis)</p>
+                </div>
+                <p>L'hôtel Feu ne se situe bien sûr pas sur un volcan, mais en Finlande. Feu de la terre volcanique crachant non loin de là ses geysers, feu des volcans à l'horizon et, bien entendu, feu des aurores boréales que vous pourrez admirer tous les soirs par le toit vitré de votre chambre.</p>
+                <button class="buttonBig">Réserver</button>
+            </div>
+            <!--Images hôtel FEU-->
+            <div class="cardImg">
+                <div class="big">
+                    <img src="./assets/igloos-Hotel-Feu-4-Elements.jpg" alt="Vue des igloos de l'hötel Feu 4 Elements sous la neige">
+                </div>
+                <div class="small">
+                    <img src="./assets/aurore-boreale-Hotel-Feu-4-Elements.jpg" alt="Vue de l'hôtel Feu sous les aurores boréales">
+                </div>
+            </div>
+        </article>
+        <!--Hôtel AIR-->
+        <article class="cardGauche flex spaceBetween">
+            <!-- Images hôtel Air-->
+            <div class="cardImg">
+                <div class="small">
+                    <img src="./assets/passerelle-Hotel-Air-4-Elements.jpg" alt="Passerelle de l'hôtel Air 4 Elements">
+                </div>
+                <div class="big">
+                    <img src="./assets/paysage-Hotel-Air-4-Elements.jpg" alt="Hôtel Air 4 Elements à la cime des arbres">
+                </div>
+            </div>
+            <!--Présentation hôtel AIR-->
+            <div class="cardPresentation flex">
+                <h2>Hôtel Air</h2>
+                <div class="localisation flex itemCenter">
+                    <img src="./assets/icon/map-pin.svg" alt="Map pin pour visualiser le lieu sur une carte">
+                    <p>Brésil</p>
+                </div>
+                <div class="avis flex itemCenter">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#D9C7B3"/>
+                    </svg>
+                    <p>(325 avis)</p>
+                </div>
+                <p>L'hôtel Air se situe à la frontière du Brésil et du Pérou.
+                C'est un concept architectural innovant qui a permis une implantation à la cîme de la forêt pour offrir un panorama vertigineux et cotoyerchaque matin, de votre chambre (avec ou sans piscine), les oiseaux à votre réveil.</p>
+                <button class="buttonBig">Réserver</button>
+            </div>
+        </article>
+        <!--Hôtel TERRE-->
+        <article class="cardDroite flex spaceBetween">
+            <!--Présentation hôtel TERRE-->
+            <div class="cardPresentation flex">
+                <h2>Hôtel Terre</h2>
+                <div class="localisation flex itemCenter">
+                    <img src="./assets/icon/map-pin.svg" alt="Map pin pour visualiser le lieu sur une carte">
+                    <p>Thaïlande</p>
+                </div>
+                <div class="avis flex itemCenter">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#D9C7B3"/>
+                    </svg>
+                    <p>(325 avis)</p>
+                </div>
+                <p>L'hôtel Terre est situé dans des grottes naturelles en Thaïlande. Retaillées et aménagées avec beaucoup de soin, les chambres de l'hôtel vous offriront soit la fraîcheur et l'apaisement à près de vingt mètres de profondeur, soit un hâvre de paix ouvrant sur l'horizon de la mer au loin.</p>
+                <button class="buttonBig">Réserver</button>
+            </div>
+            <!--Images hôtel Terre-->
+            <div class="cardImg">
+                <div class="big">
+                    <img src="./assets/chambre-Hotel-Terre-4-Elements.jpg" alt="Chambre de l'hôtel Terre 4 Elements">
+                </div>
+                <div class="small">
+                    <img src="./assets/salle-manger-Hotel-Terre-4-Elements.jpg" alt="Salle à manger de l'hôtel Terre 4 Elements">
+                </div>
+            </div>
+        </article>
+          <!--Hôtel EAU-->
+          <article class="cardGauche flex spaceBetween">
+            <!--Images hôtel Eau-->
+            <div class="cardImg">
+                <div class="small">
+                    <img src="./assets/nager-Hotel-Eau-4-Elements.jpg" alt="Une personne qui nage dans la piscine de l'hôtel Eau 4 Elements">
+                </div>
+                <div class="big">
+                    <img src="./assets/chambre-Hotel-Eau-4-Elements.jpg" alt="Chambre de l'hôtel Eau 4 Elements">
+                </div>
+            </div>
+            <!--Présentation hôtel EAU-->
+            <div class="cardPresentation flex">
+                <h2>Hôtel Eau</h2>
+                <div class="localisation flex itemCenter">
+                    <img src="./assets/icon/map-pin.svg" alt="Map pin pour visualiser le lieu sur une carte">
+                    <p>Île du Pacifique</p>
+                </div>
+                <div class="avis flex itemCenter">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#363A2B"/>
+                    </svg>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58804 1.05658L5.51309 5.19357L0.870668 5.85911C0.0381459 5.97784 -0.295498 6.98709 0.308239 7.56515L3.66692 10.7835L2.87253 15.3298C2.72954 16.1516 3.60973 16.7671 4.34692 16.3828L8.5 14.2362L12.6531 16.3828C13.3903 16.764 14.2705 16.1516 14.1275 15.3298L13.3331 10.7835L16.6918 7.56515C17.2955 6.98709 16.9619 5.97784 16.1293 5.85911L11.4869 5.19357L9.41196 1.05658C9.04019 0.319169 7.96299 0.309795 7.58804 1.05658Z" fill="#D9C7B3"/>
+                    </svg>
+                    <p>(325 avis)</p>
+                </div>
+                <p>L'hôtel Eau est situé sur une île de 2 kilomètres carrés très exactement équidistante de Vladivostok et de Los Angeles. C'est le milieu duPacifique. Vous y disposerez de votre plage, de votre bateau et de votre majordome privés. Votre chambre est un caisson immergé à deux mètres sous l'eau.</p>
+            </div>
+        </article>
+    </section>
+    <!--Section du Concept et de l'Architecture-->
+    <section class="container-concept flex spaceBetween paddings">
+        <article class="flex gap40 concept width40">
+            <h3>Le Concept</h3>
+            <div>
+                <img src="./assets/concept-Hotel-4-Elements.jpg" alt="Vue d'une architecture de l'hôtel Air 4 Elements">
+                <p>Depuis l'ouverture de ses 4 hôtels en 2012, 4 Éléments s'est démarqué en proposant des établissements exceptionnels dans des lieux uniques, symbolisant les quatre éléments : terre, eau, air et feu. Ces hôtels insolites, construits dans des endroits inattendus à travers la planète, incarnent notre volonté de révolutionner le tourisme en intégrant luxe, aventure et vision à long terme. Chacun de nos établissements offre un environnement et un service uniques, alliant la rigueur de l'hôtellerie de luxe à une proximité quotidienne avec les habitants. Explorez les environs avec des guides experts tels que des ethnologues, astrophysiciens, géologues et climatologues. Ce que nous vous proposons n'est pas un simple "tour", mais une véritable révolution.</p>
+            </div>
+        </article>
+        <article class="flex gap40 architecture width40">
+            <h3>L'architecture</h3>
+            <div>
+                <p>L'architecture innovante constitue une étape supplémentaire vers l'exploration de l'Espace, représentant l'extension de notre civilisation vers ses aspects les plus avancés. S'immerger dans l'un de nos hôtels, c'est embrasser une expérience sensorielle où l'on peut se ressourcer au contact des matières représentatives des quatre éléments. C'est une opportunité de se découvrir en harmonie avec la terre, l'air, l'eau et le feu. Notre approche unique vise à transcender les frontières traditionnelles du voyage en offrant une expérience qui éveille les sens et connecte les visiteurs à la quintessence de chaque élément. En plongeant dans nos établissements, les clients sont invités à explorer l'intersection fascinante entre l'innovation architecturale etla nature environnante.</p>
+                <img src="./assets/architecture-Hotel-4-Elements.jpg" alt="Vue du siège social des hôtels 4 Elements">
+            </div>
+        </article>
+    </section>
+    <!--Article sur le Créateur-->
+    <article class="createur flex spaceBetween paddings">
+        <div class="width40">
+            <h3>Le mot du créateur</h3>
+            <div class="guillemets"><img src="./assets/guillemets-Hotel-4-Elements.png" alt="Guillemets stylisés"></div>
+            <p>L'architecture innovante représente une avancée vers l'exploration de l'Espace, symbolisant l'extension de notre civilisation vers ses plus grandes aspirations. S'immerger dans nos hôtels, c'est vivre une expérience sensorielle, se ressourcer au contact des matières des quatre éléments. C'est une découverte en harmonie avec la terre, l'air, l'eau et le feu, où chaque détail architectural offre une connexion profonde avec ces éléments fondamentaux. Les témoignages de nos visiteurs soulignent l'impact transformateur de cette expérience immersive, décrivant une reconnexion unique avec la nature et une redécouverte de soi au sein de cet environnement exceptionnel. Cette approche révolutionnaire redéfinit les attentes du voyage, offrant non seulement un hébergement luxueux, mais une véritable aventure sensorielle qui transcende les limites conventionnelles du tourisme.</p> <br>
+            <p class="gras">Trinh Xuan Thuan</p>
+            <p class="vert">Co-fondateur de 4 Eléments</p>
+        </div>
+        <div class="portrait width40">
+            <img src="./assets/Xuan-Thuan-createur-Hotel-4-Elements.jpg" alt="">
+        </div>
+    </article>
+    </main>
+    <!--FOOTER-->
+    <footer class="flex spaceBetween">
+        <!--Div slogan et réseaux sociaux-->
+        <div class="reseaux">
+            <a href="./home.html"><img src="./assets/logo-noir-Hotel-4-Elements.png" alt="Logo des Hötels 4 Elements"></a>
+            <p>N'attendez plus pour vivre l'expérience 4 éléments le temps d'une nuit.</p>
+            <ul class="flex">
+                <li><a href="lien sur la page Facebook" title="Facebook Hotels 4 Elements"><img src="./assets/icon/facebook.svg" alt="Logo Facebook pour se rendre sur la page de l'hôtel 4 Elements"></a></li>
+                <li><a href="lien sur la page Instagram" title="Instagram Hotels 4 Elements"><img src="./assets/icon/instagram.svg" alt="Logo Instagram pour se rendre sur la page de l'hôtel 4 Elements"></a></li>
+            </ul>
+        </div>
+        <!--Div Contact-->
+        <div class="contact">
+            <h5>Contact</h5>
+            <address><a href="8 avenue exemple 66832 Ville Pays"><span class="adrGras">Adresse :</span> 8 avenue exemple 66832 Ville Pays</a></address> 
+            <p><span class="adrGras">Ouverture :</span> tous les jours de 9h à 20h30</p> 
+            <!--Je vais proposer au client d'ajouter son adresse email pour plus d'efficacité-->
+            <address><a href="tel:+330828028002" title="numero de telephone"><span class="adrGras">Tél :</span> 33 08 280 28002</a></address> 
+            <button class="buttonSmall">Réserver en ligne</button>
+        </div>
+        <!--Div Mentions légales etc.-->
+        <div class="mentions">
+            <ul>
+                <li><a href="">Mentions légales</a></li>
+                <li><a href="">Crédits</a></li>
+                <li><a href="">CGV</a></li>
+                <li><a href="">Confidentialité</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

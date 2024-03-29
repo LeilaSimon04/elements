@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez l'ultime évasion dans un de nos hôtels de luxe 4 Éléments. Chaque hôtel vous propose, à travers un des 4 éléments (Feu Air Terre Eau), une expérience incomparable. Venez vous ressourcer dans un cadre exceptionnel. Réservez dès maintenant pour une escapade unique.">
+    <title>Hôtels 4 Elements - Réservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Dans form il y a action où l'on doit noter l'URL où seront envoyées les données-->
+    <!--Je mets l'attribut novalidate pour qu'HTML ne prenne pas le devant sur ce que je vais spécifier dans HTML. Par exemple pour l'input email je veux que ce soit moi qui décide comment je préviens l'utilisateur qu'il fait une erreur-->
+<form action="" method="get" id="monForm" novalidate>
+    <h3>Réservation de votre séjour dans l'un de nos hôtels 4 Elements</h3>
+    <!--FIELDSET INFOS PERSOS-->
+    <fieldset>
+        <legend>Vos informations personnelles</legend>
+        <!--DIV NOM-->
+        <div class="flex itemCenter">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom"/>
+            <p class="p-error d-none" id="error-nom"></p>
+        </div>
+        <!--DIV PRENOM-->
+        <div class="flex itemCenter">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom"/>
+            <p class="p-error d-none" id="error-prenom"></p>
+        </div>
+        <!--DIV EMAIL-->
+        <div class="flex itemCenter">
+            <label for="email">Email :</label>
+            <input type="email" id="email" title="example@example.com"/>
+            <p class="p-error d-none" id="error-email"></p>
+        </div>
+        <!--DIV TELEPHONE-->
+        <div class="flex itemCenter">
+            <label for="phone">Numéro de téléphone :</label>
+            <input type="tel" id="phone" name="phone"/>
+            <p class="p-error d-none" id="error-phone"></p>
+        </div>
+        <h4>Adresse de facturation :</h4>
+        <!--DIV Numéro de RUE BOULEVARD ETC.-->
+        <div class="flex itemCenter">
+            <label for="numeroRue">Numéro de voie :</label>
+            <input type="text" id="numeroRue" name="numeroRue"/>
+            <p class="p-error d-none" id="error-numeroRue"></p>
+        </div>
+        <!--DIV Ligne 1 ADRESSE RUE OU LIEU DIT OU BATIMENT ETC.-->
+        <div class="flex itemCenter">
+            <label for="adresseLigne1">Adresse :</label>
+            <input type="text" id="adresseLigne1" name="adresseLigne1"/>
+            <p class="p-error d-none" id="error-adresseLigne1"></p>
+        </div>
+        <!--DIV Ligne 2 ADRESSE RUE OU LIEU DIT OU BATIMENT ETC.-->
+        <div class="flex itemCenter">
+            <label for="adresseLigne2">Complément d'adresse :</label>
+            <input type="text" id="adresseLigne2" name="adresseLigne2"/>
+            <p class="p-error d-none" id="error-adresseLigne2"></p>
+        </div>
+        <!--DIV CODE POSTAL-->
+        <div class="flex itemCenter">
+            <label for="codePostal">Code Postal :</label>
+            <!--Je n'ai pas mis de input Number car parfois il peut y avoir des numéros se rue 250 voir plus-->
+            <input type="text" id="codePostal" name="codePostal"/>
+            <p class="p-error d-none" id="error-codePostal"></p>
+        </div>
+        <!--DIV VILLE-->
+        <div class="flex itemCenter">
+            <label for="ville">Ville :</label>
+            <input type="text" id="ville" name="ville"/>
+            <p class="p-error d-none" id="error-ville"></p>
+        </div>
+    </fieldset>
+    <!--FIELDSET RESERVATION-->
+    <fieldset>
+        <legend>Votre réservation</legend>
+        <!--CHOIX de l'hôtel-->
+        <div class="flex itemCenter">
+            <label for="choix">Choix de l'hôtel</label>
+            <select name="choixHotel" id="choixHotel">
+                <option value="">Choisissez un hôtel</option>
+                <option value="option feu">Hôtel Feu</option>
+                <option value="option air">Hôtel Air</option>
+                <option value="option terre">Hôtel Terre</option>
+                <option value="option eau">Hôtel Eau</option>
+            </select>
+            <p class="p-error d-none" id="error-choixHotel"></p>
+        </div>
+        <!--CHOIX de la chambre-->
+        <div class="flex itemCenter">
+            <label for="choixChambre">Choix de votre chambre</label>
+            <select name="choixChambre" id="choixChambre">
+                <option value="">Choisissez votre chambre</option>
+                <option value="igloo">Igloo 500€ la nuit</option>
+                <option value="laponne">Suite Laponne 850€ la nuit</option>
+            </select>
+            <p class="p-error d-none" id="error-choixChambre"></p>
+        </div>
+        <!--CHOIX du nombre de PERSONNE-->
+        <div class="flex itemCenter">
+            <label for="choixPersonne">Nombre de personne</label>
+            <input type="number" id="nombrePersonne" name="nombrePersonne" min="1" max="2">
+            <p class="p-error d-none" id="error-nombrePersonne"></p>
+        </div>
+        <!--CHOIX DE LA DATE D'ARRIVEE-->
+        <div class="flex itemCenter">
+            <label for="dateArrivee">Date d'arrivée :</label>
+            <input type="date" name="dateArrivee" id="dateArrivee">
+            <p class="p-error d-none" id="error-dateArrivee"></p>
+        </div>
+        <!--CHOIX DE LA DATE DE DEPART-->
+        <div class="flex itemCenter">
+            <label for="dateDepart">Date d'arrivée :</label>
+            <input type="date" name="dateDepart" id="dateDepart">
+            <p class="p-error d-none" id="error-dateDepart"></p>
+        </div>
+    </fieldset>
+    <!--FIELDSET OPTIONS ET SERVICES SUPPLEMENTAIRES-->
+    <fieldset class="options">
+        <legend>Vos options et services supplémentaires</legend>
+        <!--Case à cocher si on souhaite avoir un chauffeur pendant son séjour-->
+        <div class="chauffeur">
+            <label for="chauffeur">Chauffeur 11€ / jour</label>
+            <input type="checkbox" name="chauffeur" id="chauffeur" value="11">
+        </div>
+        <!--Case à cocher si on souhaite profiter de la visite guidée du domaine-->
+        <div class="visite">
+            <label for="visite">Visite guidée du domaine et du parc naturel 20€ / personne</label>
+            <input type="checkbox" name="visite" id="visite" value="visite">
+        </div>
+        <!--DIV CHOIX des REPAS-->
+        <div class="repas">
+            <!--Case à cocher Repas de MIDI-->
+            <div>
+                <label for="choixMidi">Repas de midi 25€ / personne et par repas</label>
+                <input type="checkbox" name="choixMidi" id="choixMidi" value="choix repas de midi">
+            </div>
+            <!--Case à cocher Repas du SOIR-->
+            <div>
+                <label for="choixSoir">Repas du soir 25€ / personne et par repas</label>
+                <input type="checkbox" name="choixSoir" id="choixSoir" value="choix repas du soir">
+            </div>
+            <!--Case à cocher Repas PONCTUEL-->
+            <div>
+                <label for="choixPonctuel">Repas ponctuel (le prix du repas ne sera pas comptabilisé dans la réservation mais sera dû directement auprès du service de restauration, prévenir la veille)</label>
+                <input type="checkbox" name="choixPonctuel" id="choixPonctuel" value="choix repas ponctuel">
+            </div>
+        </div>
+        <!--REGIME ALIMENTAIRE-->
+        <fieldset class="regimeAlimentaire">
+                <legend>Régime alimentaire</legend>
+                <label for="vegan">Vegan</label>
+                <input type="radio" name="regime" id="vegan" value="vegan">
+                <label for="vegetarien">Végétarien</label>
+                <input type="radio" name="regime" id="vegetarien" value="vegetarien">
+                <label for="aucun">Aucun</label>
+                <input type="radio" name="regime" id="aucun" value="aucun">
+                <label for="sansGluten">Sans gluten</label>
+                <input type="radio" name="sansGluten" id="sansGluten" value="sansGluten">
+                <label for="sansLactose">Sans lactose</label>
+                <input type="radio" name="sansLactose" id="sansLactose" value="sansLactose">
+                <label for="autres">Autres allergies et intolérances</label>
+                <input type="checkbox" name="autres" id="autres" value="autres">
+                <label for="autres">Autres allergies et intolérances :</label>
+                <input type="text" name="autres" id="autres" value="précisez s'il vous plaît">
+        </fieldset>
+    </fieldset>
+    <!--SUBMIT-->
+    <div class="submit">
+        <input type="submit" value="Envoyer le formulaire">
+    </div>
+</form>
+    <div class="popup none">
+        <!--
+        <h3>Récapitulatif de votre réservation</h3>
+        <h4>Vos informations personnelles</h4>
+        <p>Nom :</p>
+        <p>Prénom :</p>
+        <br>
+        <p>Email :</p>
+        <br>
+        <p>Numéro de téléphone :</p>
+        <br>
+        <p>Adresse :</p>
+        <br>
+        <p>Code postal :</p>
+        <p>Ville :</p>
+        <h4>Votre réservation</h4>
+        <p>Séjour à l'hôtel :</p>
+        <br>
+        <p>Nombre de personne :</p>
+        <br>
+        <p>Date d'arrivée :</p>
+        <p>Date de départ :</p>
+        <h4>Vos options</h4>
+        <p>Chauffeur :</p>
+        <br>
+        <p>Visite guidée</p>
+        <br>
+        <h5>Repas</h5>
+        <p>Repas de midi :</p>
+        <br>
+        <p>Repas du soir :</p>
+        <p>Repas ponctuel :</p>
+        <h5>Régime alimentaire</h5>
+        <p>Vegan :</p>
+        <p>Végétarien :</p>
+        <p>Aucun :</p>
+        <p>Sans gluten :</p>
+        <p>Sans lactose :</p>
+        <p class="marginParagraphe">Autres allergies et intolérances :</p>
+        <a href="" class="boutonReservation">Confirmer la réservation</a>
+        -->
+    </div>
+<!--FOOTER-->
+<footer class="flex spaceBetween">
+    <!--Div slogan et réseaux sociaux-->
+    <div class="reseaux">
+        <a href="./home.html"><img src="./assets/logo-noir-Hotel-4-Elements.png" alt="Logo des Hötels 4 Elements"></a>
+        <p>N'attendez plus pour vivre l'expérience 4 éléments le temps d'une nuit.</p>
+        <ul class="flex">
+            <li><a href="lien sur la page Facebook" title="Facebook Hotels 4 Elements"><img src="./assets/icon/facebook.svg" alt="Logo Facebook pour se rendre sur la page de l'hôtel 4 Elements"></a></li>
+            <li><a href="lien sur la page Instagram" title="Instagram Hotels 4 Elements"><img src="./assets/icon/instagram.svg" alt="Logo Instagram pour se rendre sur la page de l'hôtel 4 Elements"></a></li>
+        </ul>
+    </div>
+    <!--Div Contact-->
+    <div class="contact">
+        <h5>Contact</h5>
+        <address><a href="8 avenue exemple 66832 Ville Pays"><span class="adrGras">Adresse :</span> 8 avenue exemple 66832 Ville Pays</a></address> 
+        <p><span class="adrGras">Ouverture :</span> tous les jours de 9h à 20h30</p> 
+        <!--Je vais proposer au client d'ajouter son adresse email pour plus d'efficacité-->
+        <address><a href="tel:+330828028002" title="numero de telephone"><span class="adrGras">Tél :</span> 33 08 280 28002</a></address> 
+        <button class="buttonSmall">Réserver en ligne</button>
+    </div>
+    <!--Div Mentions légales etc.-->
+    <div class="mentions">
+        <ul>
+            <li><a href="">Mentions légales</a></li>
+            <li><a href="">Crédits</a></li>
+            <li><a href="">CGV</a></li>
+            <li><a href="">Confidentialité</a></li>
+        </ul>
+    </div>
+</footer>
+<!--LIEN DU SCRIPT JAVASCRIPT-->
+<script src="./app.js"></script>
+</body>
+</html>

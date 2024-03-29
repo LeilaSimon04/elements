@@ -1,0 +1,468 @@
+/*GENERAL*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Playfair+Display+SC:wght@700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+* { 
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary : #363a2b;
+    --secondary : #4F6234;
+    --tertiary : #d9c7b3;
+    --input : #E1D2C2;
+    --background : #E5E0DC;
+}
+.body{position: relative;}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.spaceBetween {justify-content: space-between;}
+.itemCenter {align-items: center;}
+.textCenter {text-align: center;}
+/* Pour que les images soient responsives */
+.responsive{width : 100%;}
+/*Pour Header et Footer*/
+.petitPadding {padding:0 5%;}
+/*Paddings pour ma section cartes Hôtels*/
+.paddingTopBot {padding: 10% 0 5% 0;}
+/*Paddings pour ma section concept et l'article Créateur*/
+.paddings {padding: 5% 10%;}
+.gap40 {gap : 40px;}
+/* ELEMENTS TEXTUELS */
+h1{
+    font-family: "Playfair display medium";
+    color: var(--tertiary);
+    font-size: 6rem;
+    text-align: end;
+    padding-right: 40px;
+}
+h2{
+    font-family: "Playfair display";
+    color: var(--primary);
+    font-size: 5rem;
+    width: 100%;
+}
+h3{
+    font-family: "Playfair display medium";
+    color: var(--primary);
+    font-size: 2.5rem;
+    width: 100%;
+}
+h4{
+    font-family: "Playfair display medium";
+    color: var(--primary);
+    font-size: 1.8rem;
+    width: 100%;
+}
+h5{
+    font-family: "karla";
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+p{
+    font-family: "karla";
+    color: var(--primary);
+    font-size: 1.1rem;
+    line-height: 25px;
+}
+/*Class pour les p en légende*/
+.legend {font-family: "karla";
+    color: var(--secondary);
+    font-size: 1rem;
+}
+a{
+    text-decoration: none;
+    font-family: "karla";
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+/* Changement de couleur quand la souris passe dessus */
+a:hover{
+    color: var(--secondary);
+}
+address {
+    font-style: normal;
+    font-family: "karla";
+    font-size: 1.1rem;
+}
+li {
+    list-style-type: none;
+    font-family: "karla";
+    color: var(--primary);
+    font-size: 1rem;
+}
+/*Bouttons*/
+.buttonSmall {
+    background-color: var(--secondary);
+    border-radius: 6px;
+    border: 0;
+    padding: 10px;
+    color: var(--background);
+    font-size: 1rem;
+    letter-spacing: 1.1px;
+    text-align: center;
+}
+.buttonBig {
+    background-color: var(--primary);
+    border-radius: 6px;
+    border: 0;
+    padding: 8px 25px;
+    color: var(--background);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+/*Class de tailles*/
+.width40{width: 40%;}
+/*Body*/
+body {background-color: var(--background);}
+/*HEADER*/
+header {
+    height: 7vh;
+    background-color:var(--background);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 2px 5px grey;
+}
+header>div {width: 30%;}
+.headerGauche a {width: 20%;}
+.headerGauche img {width: 100%;}
+.headerGauche nav {width:50%;}
+.headerGauche nav ul li a:hover {text-decoration: underline;}
+.headerDroit nav {width:30%;}
+/*Quand je lui ai mis la class width40 ça n'a pas fonctionné, je lui l'ai donc spécifié comme ça*/
+.headerDroit div {width:40%;}
+/*HERO*/
+.hero {width: 100%;
+height: 93vh;
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,0.008841036414565795) 0%, rgba(54,58,43,0.8) 100%);
+}
+/*VIDEO du HERO*/
+.hero video {width: 100%;
+    height: 93vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+/*Je demanderai bien au client s'il n'est pas possible de faire figurer le slogan (h1) un peu plus haut, pour l'instant je le laisse comme sur la maquette*/
+.textHero {
+    position : relative;
+    top : 450px;
+}
+.reservation {
+    background-color: var(--input);
+    width: 30%;
+    border-radius: 20px;
+    padding: 25px;
+    position: absolute;
+    top:470px;
+    left: 730px;
+}
+.reservation h4 {width: 100%;}
+.reservation div {width: 30%;}
+/*LABEL pour Select et Input*/
+label {
+    display: block;
+    font-family: "karla";
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-top : 15px;
+}
+/* Pour Select et Label */
+select, input {
+    margin: 0.4rem 0;
+    font-family: "karla";
+    font-size: 0.9rem;
+    border: none;
+    background-color: var(--background);
+    color: var(--primary);
+    border-radius: 5px;
+    padding: 15px;
+}
+.inputNbr input { width: 80%}
+.reservation button {
+    position: relative;
+    top: 40px;
+    left: 220px;
+}
+/* SECTION Cartes Hôtels */
+/* Pour éloigner la première carte d'hôtel de la div de réservation en position relative*/
+.container-hotel {gap: 90px;}
+/*dimension des 4 cartes (articles) hôtels*/
+.container-hotel article {width: 90%;}
+/*Margin de côté pour les cartes hôtels*/
+.cardDroite {
+    margin-left: 10%;
+}
+.cardGauche {
+    margin-right: 10%;
+}
+/*Div avec texte de présentation de chaque hôtel*/
+.cardPresentation {
+    width: 30%;
+    padding: 10% 0;
+}
+.localisation {width: 100%;}
+.avis {width: 100%;}
+.cardPresentation p {padding: 15px 0;}
+.cardPresentation .buttonBig {margin-top: 10%;}
+/*Div d'images de mes cartes (articles) hôtels*/
+.cardImg {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+/*Classes IMG*/
+.big {
+    width: 50%;  
+}
+.big img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.small {
+    width: 35%;
+}
+.small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/*Section Concept et architeccture*/
+.container-concept {
+    width: 100%;
+}
+.container-concept article img {width: 100%;}
+.concept p {padding-top: 5%;}
+.architecture p {padding-bottom: 5%;}
+/*Article Créateur */
+.createur {width: 100%;}
+.guillemets {width: 20%;
+padding-top: 10%;}
+.gras {
+    color: var(--primary);
+    font-weight: 800;
+}
+.vert {color: var(--secondary);}
+.createur div img {width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;}
+/*FOOTER*/
+footer {
+    background-color: white;
+    padding : 2% 5%;
+}
+footer div {width: 20%;}
+footer p, footer a, footer ul, footer li, footer address {
+    font-size: 0.8rem;
+    padding-top: 5%;
+}
+
+/*Footer - gauche - RESEAUX */
+.reseaux img {width: 30%;}
+.reseaux ul {justify-content: flex-start;}
+.reseaux ul li {width: 20%;
+}
+/* Footer - milieu - Contact */
+.contact button {margin-top: 5%;}
+.adrGras {color:var(--primary);
+font-weight: 800;}
+/* CSS PAGE HOTEL FEU   PAGE HOTEL FEU   PAGE HOTEL FEU   PAGE HOTEL FEU   PAGE HOTEL FEU   PAGE HOTEL FEU   PAGE HOTEL FEU   PAGE HOTEL FEU  */
+/*  CSS GENERAL POUR PAGE HOTEL FEU  */
+.paddingTop {padding-top: 5%;}
+/*Section INTRO hôtel FEU */
+.introHotel {background-color: var(--background);}
+/*Section OFFRES hôtel FEU */
+.offres ul {
+    column-count: 2; /* Divise les éléments en deux colonnes */
+    column-gap: 1px; /* Ajoute un espace entre les colonnes */
+}
+.offres ul li {gap:6px;}
+.offres h3 {padding-bottom: 3%;}
+.offreArticle {gap:30px;}
+.offreImg {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.offreText p {padding:4% 0;}
+.prix {font-size: 1.3rem;
+font-weight: bold;}
+/*Services supplémentaires*/
+.servSup {padding-left: 10%;}
+.servSup article {width: 100%;}
+/*Pseudo Carousel*/
+.carousel-container{
+    width : 100%;
+    /*On active le scroll sur X pour voir ce qui dépasse du container*/
+    overflow-x: scroll; 
+    /*Permet d'arreter le scroll au début d'une vignette*/
+    scroll-snap-type: x mandatory;
+    /*Ebauche de customisation de la scrollbar*/
+    scrollbar-color: rgb(11, 32, 13) rgb(225, 225, 225);
+    scrollbar-width: thin;
+    padding: 8px 0;
+}
+.carousel-slides{
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    gap: 16px;
+}
+.carousel-item{
+    /*Permet d'arreter le scroll au début d'une vignette, couplé avec le scroll-snaptype sur le parent*/
+    scroll-snap-align: start;
+    width : 550px;
+    height: 300px;
+    position: relative;
+    border-radius: var(--primary);
+}
+.carousel-item img{
+    border-radius: var(--primary);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.carousel-item div{
+    border-radius: var(--radius);
+    padding: 16px;
+    position: absolute;
+    bottom:0;
+    background: rgba(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.008841036414565795) 0%, rgba(54,58,43,0.8) 100%);
+}
+.carousel-item p.title,.carousel-item p{
+    color: #fff;
+    text-align: right;
+}
+.carousel-item p.title{
+    font-weight: bold;   
+    font-size: 18px;
+}
+.carousel-item p{font-size: 14px;}
+/*Là c'est de la bidouille :( */
+.carousel-item div button {margin-left: 430px;}
+/* Vidéo pour l'hôtel Feu*/
+.feuVideo {width: 100%;}
+.feuVideo video {width: 100%;
+    object-fit: cover;
+}
+/* CSS Page RESERVATION RESERVATION RESERVATION RESERVATION RESERVATION RESERVATION RESERVATION RESERVATION */
+form {
+    width:100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--primary);
+}
+form>h3{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: var(--tertiary);
+    text-align: center;
+}
+form>fieldset{padding: 10px;}
+form>fieldset>legend{
+    font-size: 1.8rem;
+    color: var(--tertiary);
+    font-weight: bold;
+}
+label{
+    font-size: 1.1rem;
+    color: var(--tertiary);
+    width: 150px;
+}
+input{
+    width: 80%;
+    border:1px solid var(--primary);
+    border-radius: 10px;
+}
+form>div{gap:5px;}
+.options{
+    display: flex;
+    gap:5px;}
+.chauffeur{ width: 50%;}
+.visite{width: 50%;}
+.repas{width: 50%;}
+.regimeAlimentaire{
+    width: 50%;
+    padding-left: 20px;
+}
+.regimeAlimentaire>legend{
+    color: var(--tertiary);
+    font-weight: bold;
+}
+input[type=checkbox]{
+    width:5%;
+}
+input[type=submit] {
+    width: 30%;
+    background-color: var(--secondary);
+    border-radius: 6px;
+    border: 0;
+    padding: 8px 25px;
+    color: var(--background);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+/* CSS DU POP UP du FORMULAIRE */
+.popup {
+    width: 60%;
+    padding: 30px;
+    background-color: var(--secondary);
+    position : absolute;
+    top: 200px;
+    left: 470px;
+}
+.none{display: none;}
+.popup>h3{
+    color: var(--tertiary);
+    text-align: center;
+    padding-bottom: 20px;
+}
+.popup>h4{
+    color: var(--tertiary);
+}
+.popup>h5{
+    color: var(--tertiary);
+}
+.popup>p{
+    color: var(--tertiary);
+}
+.input-error{
+    border:1px solid red;
+}
+.p-error{
+    color: red;
+}
+.d-none{
+    display:none;
+}
+.marginParagraphe{
+    margin-bottom: 30px;
+}
+.boutonReservation{
+    background-color: var(--primary);
+    border-radius: 6px;
+    border: 0;
+    padding: 8px 25px;
+    color: var(--background);
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
